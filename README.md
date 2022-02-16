@@ -500,3 +500,61 @@ odds.subtracting(primes).sorted()
 ## Dictionaries
 *  store unordered lists of values of the same type it used to store key value paire where key is identifier 
 * var dicVar = \[KeyDataType: ValueDataType\]()
+* accessing data 
+	* dicVar[keyValue]
+* Updating Data 
+	* dicVar.updateValue(newValue,forKey: keyName)
+	* dicVar[key]=newValue 
+* Removing Data 
+	* dicVar.revmoeValue(forKey: keyValue)
+	* dicVar[keyName]=nil
+* property 
+	* count 
+		* dicVar.count
+	* empty
+		* dicVar.isEmpty 	
+
+* example
+```
+var dictVar:[Int:String] = [1:"One", 2:"Two", 3:"Three"]
+```
+* example 
+```
+var name = ["aaa",”bbb”,”ccc”]
+var age = [10,20, 21]
+let persons = Dictionary(uniqueKeysWithValues: zip(name, age))
+```
+
+* Dictionary Filtering
+	* filtering the dicnatory with expressions 
+	* var personsVar = persons.filter { $0.value < 10 }
+
+* Dictionary Grouping
+	* grouding the data based on expression 
+```
+var names = ["aaa","bbb","aaa","ddd","eee","bbb"]
+var groupedName = Dictionary(grouping: names ) { $0.first! }
+print(groupedName)
+//["e": ["eee"], "d": ["ddd"], "b": ["bbb", "bbb"], "a": ["aaa", "aaa"]]
+```
+
+* Iterating on Dict
+```
+var numbers:[Int:String] = [1:"One", 2:"Two", 3:"Three"]
+for (key, value) in numbers.enumerated() {
+   print("Dictionary key \(key) - Dictionary value \(value)")
+}
+```
+
+* converting to the array 
+	* dicVar.keys
+	* dicVar.values
+```
+var dicVar:[Int:String] = [1:"One", 2:"Two", 3:"Three"]
+
+let dictKeys = [Int](dicVar.keys)
+let dictValues = [String](dicVar.values)
+```
+
+---
+
