@@ -499,4 +499,4 @@ odds.subtracting(primes).sorted()
 
 ## Dictionaries
 *  store unordered lists of values of the same type it used to store key value paire where key is identifier 
-* var dicVar = [KeyDataType: ValueDataType]()
+* var dicVar = \[KeyDataType: ValueDataType\]()
