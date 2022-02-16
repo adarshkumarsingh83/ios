@@ -528,7 +528,11 @@ let persons = Dictionary(uniqueKeysWithValues: zip(name, age))
 * Dictionary Filtering
 	* filtering the dicnatory with expressions 
 	* var personsVar = persons.filter { $0.value < 10 }
-
+```
+var numbers:[String:Int] = ["One":1, "Two":2, "Three":3]
+var gtNumber = numbers.filter { $0.value < 2 }
+print(gtNumber)
+```
 * Dictionary Grouping
 	* grouding the data based on expression 
 ```
