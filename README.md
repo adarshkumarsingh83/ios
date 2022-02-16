@@ -236,28 +236,32 @@ print("Person who \(name) is more than \(worth) millions")
 /
 ## Operators Precedence
 * Primary Expression Operators	() [] . expr++ expr--	            left-to-right
-* Unary Operators				* & + - ! ~ ++expr --expr           
-								* / %
+* Unary Operators				\* & + - ! ~ ++expr --expr           
+								\* / %
 								+ -
-								>> <<
+								\>> <<
 								< > <= >=
 								== !=								right-to-left
-/
 * Binary Operators				&	^	| &&	||					left-to-right
-/
-/
 * Ternary Operator				?:									right-to-left
 * Assignment Operators	        = += -= *= /= %= >>= <<= &=^= |=	right-to-left
 * Comma							,									left-to-right
-/
-/
-/
+
+
 ## Condition Statement 
 * if statement
 ```
 	if condition {
 
 	}
+```
+* if else 
+```
+		if condition {
+
+		} else {
+
+		}
 ```
 * if else if 
 ```
@@ -267,3 +271,94 @@ print("Person who \(name) is more than \(worth) millions")
 
 		}
 ```
+
+* swtich case 
+```
+switch(expression){
+   case constant-expression :
+      statement(s);
+      break; /* optional */
+   case constant-expression :
+      statement(s);
+      break; /* optional */
+
+   /* you can have any number of case statements */
+   default : /* Optional */
+      statement(s);
+}
+```
+* fallthrough statement
+```
+switch expression {
+   case expression1 :
+      statement(s)
+      fallthrough /* optional */
+   case expression2, expression3 :
+      statement(s)
+      fallthrough /* optional */
+
+   default : /* Optional */
+      statement(s);
+}
+```
+
+## Loops 
+* for-in loop
+	* iterates over collections of items, such as ranges of numbers, items in an array, or characters in a string
+```
+for index in var {
+   statement(s)
+}
+```
+* while loop 
+```
+while condition {
+   statement(s)
+}
+```
+
+* repeat...while loop
+	* repeat...while loop is guaranteed to execute at least once.
+```
+repeat {
+   statement(s);
+} 
+while( condition );
+```
+* Continue Statement
+* Break Statement
+
+
+## String 
+* property 
+	* isEmpty A Boolean value that determines whether a string is empty or not.
+	* utf8 Property to return a UTF-8 representation of a string.
+	* UTF-16 Property to return a UTF-16 representation of a string.
+	* unicodeScalars Property to return a Unicode Scalar representation of a string.
+	* startIndex	To get the value at starting index of string.
+	* endIndex	To get the value at ending index of string.
+	* Indices	To access the indeces one by one. i.e all the characters of string one by one.
+* function 
+	* hasPrefix(prefix: String) Function to check whether a given parameter string exists as a prefix of the string or not.
+	* hasSuffix(suffix: String) Function to check whether a given parameter string exists as a suffix of the string or not.
+	* toInt()	Function to convert numeric String value into Integer.
+	* count() Global function to count the number of Characters in a string.
+	* insert("Value", at: position)	To insert a value at a position.
+	* remove(at: position)	removeSubrange(range)	to remove a value at a position, or to remove a range of values from string.
+	* reversed()	returns the reverse of a string
+	* append(string)
+* operator 
+	* + Operator to concatenate two strings, or a string and a character, or two characters.
+	* +=	Operator to append a string or character to an existing string.
+	* ==	Operator to determine the equality of two strings.
+	* <	Operator to perform a lexicographical comparison to determine whether one string evaluates as less than another.
+* String Interpolation
+```
+var name = "adarsh"
+var age = 20
+var message = "name and \(name)  age \(age) "
+```
+
+## Characters
+	* let charVar: Character = "A"
+	* print("Value of charVar \(charVar)")
