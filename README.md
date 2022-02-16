@@ -432,3 +432,49 @@ array = array1+array2
 print("is array empty = \(array.isEmpty)")
 print("Total items in array = \(array.count)")
 ```
+
+---
+
+## Sets
+* store distinct values of same types without order preserve 
+* var setVar = Set<DataType>() 
+* property 
+	* setVar.count 
+	* setVar.isEmpty 
+* method 
+	* setVar.insert(typeValue)
+	* setVar.remove(typeValue)
+	* setVar.contains(typeValue)
+	* setVar.sorted()
+
+* Iterating on Set
+	* using loop 
+```
+for items in setVar {
+   print(item)
+}
+```
+* operations 
+	* Intersection
+	* Union
+	* subtracting
+```
+let evens: Set = [10,12,14,16,18]
+let odds: Set = [5,7,9,11,13]
+let primes = [2,3,5,7]
+
+odds.union(evens).sorted()
+// [5,7,9,10,11,12,13,14,16,18]
+
+odds.intersection(evens).sorted()
+//[]
+
+odds.subtracting(primes).sorted()
+//[9, 11, 13]
+```
+
+---
+
+## Dictionaries
+*  store unordered lists of values of the same type it used to store key value paire where key is identifier 
+* var dicVar = [KeyDataType: ValueDataType]()
