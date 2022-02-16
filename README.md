@@ -236,12 +236,12 @@ print("Person who \(name) is more than \(worth) millions")
 
 ## Operators Precedence
 * Primary Expression Operators	() [] . expr++ expr--	            left-to-right
-* Unary Operators				* & + - ! ~ ++expr --expr           right-to-left
+* Unary Operators				* & + - ! ~ ++expr --expr           
 								* / %
 								+ -
 								>> <<
 								< > <= >=
-								== !=
+								== !=								right-to-left
 
 * Binary Operators				&	^	| &&	||					left-to-right
 
