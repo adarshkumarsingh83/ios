@@ -364,3 +364,71 @@ var message = "name and \(name)  age \(age) "
 ## Characters
 	* let charVar: Character = "A"
 	* print("Value of charVar \(charVar)")
+
+
+## Arrays 
+* var array = [DataType]()
+* var array :[DataType]=[Elements]
+* var array = [DataType](count:NumbeOfElements,repeatedValue:InitialValue)
+
+* Accessing Arrays
+	* arrayVar[index]
+```
+var array = [Int](count: 3, repeatedValue: 10)
+print( "Value of second element is \(array[0])" )
+print( "Value of second element is \(array[1])" )
+print( "Value of third element is \(array[2])" )
+```
+
+* Modifying Arrays
+	* arrayVar.append(valueOfType)
+	* arrayVar[index]=valueOfType
+```
+var array = [Int]()
+array.append(20)
+array.append(30)
+array += [40]
+array[0]= 10 
+print( "Value of second element is \(array[0])" )
+print( "Value of second element is \(array[1])" )
+print( "Value of third element is \(array[2])" )
+``` 
+
+* Iterating an Array
+	* using loops 
+```
+var array = [Int]()
+array.append(20)
+array.append(30)
+for item in array {
+   print(item)
+}
+```
+
+* Adding Two Arrays
+	 * array1 + array2 
+```
+var array1 = [Int](count:2, repeatedValue: 2)
+var array2 = [Int](count:3, repeatedValue: 1)
+
+var array = array1 + array2
+for item in array {
+   print(item)
+}
+```
+
+* Array Property 
+	* array.count
+	* array .isEmpty 
+```
+var array1 = [Int](count:2, repeatedValue: 2)
+var array2 = [Int](count:3, repeatedValue: 1)
+
+print("Total items in array1 = \(array1.count)")
+print("Total items in array2 = \(array2.count)")
+var array = [Int]()
+print("is array empty = \(array.isEmpty)")
+array = array1+array2
+print("is array empty = \(array.isEmpty)")
+print("Total items in array = \(array.count)")
+```
