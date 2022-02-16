@@ -389,7 +389,7 @@ var message = "name and \(name)  age \(age) "
 ---
 
 ## Arrays 
-* var array = [DataType]()
+* var array = \[DataType\]()
 * var array :[DataType]=[Elements]
 * var array = [DataType](count:NumbeOfElements,repeatedValue:InitialValue)
 
