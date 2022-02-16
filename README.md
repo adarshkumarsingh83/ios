@@ -6,6 +6,8 @@
 * PLAYGROUND :=> file -> new -> playground 
 * LINE NO :=> XCODE -> prefrence -> editor -> line no 
 
+---
+
 ## Keywords 
 * declarations
 ```
@@ -91,6 +93,8 @@ weak
 willSet
 ```
 
+---
+
 ## Comments 
 * single line comments 
 ```
@@ -103,6 +107,8 @@ willSet
    xxxxx
 */
 ```
+
+---
 
 ## Built-in Data Types 
 * String 
@@ -122,6 +128,8 @@ willSet
 * Tuples
 	* This is used to group multiple values in single Compound Value
 
+---
+
 ## Literals
 * Integer Literals
 	* let decimalInteger = 17         // 17 in decimal notation
@@ -139,6 +147,7 @@ willSet
 	* false
 	* nil 
 
+----
 
 ## Type Aliases
 * create a new name for an existing type using typealias
@@ -171,6 +180,7 @@ if let constantName = someOptional {
 * var varName = DataType(otherTypeValue)
 	* var number = String(12345)
 
+---
 
 ## Variable 
 * can hold value, reference to object or pointer to the function 
@@ -180,10 +190,12 @@ if let constantName = someOptional {
 		* var name:String = " adarsh kumar "
 		* var age:Int = 20
 
+---
 
 ## Constents 
 * let keyworld is used to diclare constant 
 	* let constName  = [initial value]
+
 
 ## Printing Constants
 * interpolate a variable value by wrapping the name in parentheses and escape
@@ -194,23 +206,26 @@ let worth = 1000.00
 print("Person who \(name) is more than \(worth) millions")
 
 ```
+---
 
 ## print()
 	* to print data on the console 
 
+---
+
 ## Operators
 * Arithematic operation 
-	* +	Adds two operands	A + B will give 30
+	* \+	Adds two operands	A + B will give 30
 	* −	Subtracts second operand from the first	A − B will give -10
-	* *	Multiplies both operands	A * B will give 200
+	* \*	Multiplies both operands	A * B will give 200
 	* /	Divides numerator by denominator	B / A will give 2
 	* %	Modulus Operator and remainder of after an integer/float division	B % A will give 0
 * Comparison Operators
 	* ==	Checks if the values of two operands are equal or not; if yes, then the condition becomes true.	(A == B) is not true.
 	* !=	Checks if the values of two operands are equal or not; if values are not equal, then the condition becomes true.	(A != B) is true.
-	* >		Checks if the value of left operand is greater than the value of right operand; if yes, then the condition becomes true.	(A > B) is not true.
+	* \>		Checks if the value of left operand is greater than the value of right operand; if yes, then the condition becomes true.	(A > B) is not true.
 	* <		Checks if the value of left operand is less than the value of right operand; if yes, then the condition becomes true.	(A < B) is true.
-	* >=	Checks if the value of left operand is greater than or equal to the value of right operand; if yes, then the condition becomes true.(A >= B) is not true.
+	* \>=	Checks if the value of left operand is greater than or equal to the value of right operand; if yes, then the condition becomes true.(A >= B) is not true.
 	* <=	Checks if the value of left operand is less than or equal to the value of right operand; if yes, then the condition becomes true.	(A <= B) is true.
 * Logical Operators
 	* &&	Called Logical AND operator. If both the operands are non-zero, then the condition becomes true.	(A && B) is false.
@@ -224,7 +239,7 @@ print("Person who \(name) is more than \(worth) millions")
 	* /=	Divide AND assignment operator, It divides left operand with the right operand and assigns the result to left operand	C /= A is equivalent to C = C / A
 	* %=	Modulus AND assignment operator, It takes modulus using two operands and assigns the result to left operand	C %= A is equivalent to C = C % A
 	* <<=	Left shift AND assignment operator	C <<= 2 is same as C = C << 2
-	* >>=	Right shift AND assignment operator	C >>= 2 is same as C = C >> 2
+	* \>>=	Right shift AND assignment operator	C >>= 2 is same as C = C >> 2
 	* &=	Bitwise AND assignment operator	C &= 2 is same as C = C & 2
 	* ^=	bitwise exclusive OR and assignment operator	C ^= 2 is same as C = C ^ 2
 	* |=	bitwise inclusive OR and assignment operator	C |= 2 is same as C = C | 2
@@ -232,10 +247,10 @@ print("Person who \(name) is more than \(worth) millions")
 	* Closed Range	(a...b) defines a range that runs from a to b, and includes the values a and b.	1...5 gives 1, 2, 3, 4 and 5
 	* Half-Open Range	(a..< b) defines a range that runs from a to b, but does not include b.	1..< 5 gives 1, 2, 3, and 4
 	* One- sided Range	a… , defines a range that runs from a to end of elements …a , defines a range starting from start to a 1… gives 1 , 2,3… end of elements …2 gives beginning… to 1,2
-/
+
 * Misc Operators
 	* Ternary Conditional	Condition ? X : Y	If Condition is true ? Then value X : Otherwise value Y	
-/
+
 ## Operators Precedence
 * Primary Expression Operators	() [] . expr++ expr--	            left-to-right
 * Unary Operators				\* & + - ! ~ ++expr --expr           
@@ -249,6 +264,8 @@ print("Person who \(name) is more than \(worth) millions")
 * Assignment Operators	        = += -= *= /= %= >>= <<= &=^= |=	right-to-left
 * Comma							,									left-to-right
 
+
+---
 
 ## Condition Statement 
 * if statement
@@ -304,6 +321,8 @@ switch expression {
 }
 ```
 
+---
+
 ## Loops 
 * for-in loop
 	* iterates over collections of items, such as ranges of numbers, items in an array, or characters in a string
@@ -330,6 +349,7 @@ while( condition );
 * Continue Statement
 * Break Statement
 
+---
 
 ## String 
 * property 
@@ -350,7 +370,7 @@ while( condition );
 	* reversed()	returns the reverse of a string
 	* append(string)
 * operator 
-	* + Operator to concatenate two strings, or a string and a character, or two characters.
+	* \+ Operator to concatenate two strings, or a string and a character, or two characters.
 	* +=	Operator to append a string or character to an existing string.
 	* ==	Operator to determine the equality of two strings.
 	* <	Operator to perform a lexicographical comparison to determine whether one string evaluates as less than another.
@@ -365,6 +385,8 @@ var message = "name and \(name)  age \(age) "
 	* let charVar: Character = "A"
 	* print("Value of charVar \(charVar)")
 
+
+---
 
 ## Arrays 
 * var array = [DataType]()
