@@ -230,10 +230,10 @@ print("Person who \(name) is more than \(worth) millions")
 	* Closed Range	(a...b) defines a range that runs from a to b, and includes the values a and b.	1...5 gives 1, 2, 3, 4 and 5
 	* Half-Open Range	(a..< b) defines a range that runs from a to b, but does not include b.	1..< 5 gives 1, 2, 3, and 4
 	* One- sided Range	a… , defines a range that runs from a to end of elements …a , defines a range starting from start to a 1… gives 1 , 2,3… end of elements …2 gives beginning… to 1,2
-
+/
 * Misc Operators
 	* Ternary Conditional	Condition ? X : Y	If Condition is true ? Then value X : Otherwise value Y	
-
+/
 ## Operators Precedence
 * Primary Expression Operators	() [] . expr++ expr--	            left-to-right
 * Unary Operators				* & + - ! ~ ++expr --expr           
@@ -242,16 +242,16 @@ print("Person who \(name) is more than \(worth) millions")
 								>> <<
 								< > <= >=
 								== !=								right-to-left
-
+/
 * Binary Operators				&	^	| &&	||					left-to-right
-
-
+/
+/
 * Ternary Operator				?:									right-to-left
 * Assignment Operators	        = += -= *= /= %= >>= <<= &=^= |=	right-to-left
 * Comma							,									left-to-right
-
-
-
+/
+/
+/
 ## Condition Statement 
 * if statement
 ```
