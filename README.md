@@ -2,7 +2,9 @@
 
 ----
 
-### xcode -> prefrence -> editor -> line no 
+## XCODE 
+* PLAYGROUND :=> file -> new -> playground 
+* LINE NO :=> XCODE -> prefrence -> editor -> line no 
 
 ## Keywords 
 * declarations
