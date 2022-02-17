@@ -562,3 +562,184 @@ let dictValues = [String](dicVar.values)
 
 ---
 
+## Functions 
+* defined by the "func" keyword
+```
+func funcName() {
+}
+
+
+func funcName() -> returntype {
+   return returntypeValue
+}
+
+func funcName(var1:Type,....)  {
+
+}
+
+func funcName(Parameters) -> returntype {
+   Statement1
+   Statement2
+   ---
+   Statement N
+   return returntypeValue
+}
+
+func funcName(Parameters) -> (var1:Type1,var2:Type2) {
+   Statement1
+   Statement2
+   ---
+   Statement N
+   return (var1:Type1,var2:Type2)
+}
+```
+
+* we can return multiple value from fucntion 
+```
+func ls(array: [Int]) -> (large: Int, small: Int) {
+   var lar = array[0]
+   var sma = array[0]
+
+   for i in array[1..<array.count] {
+      if i < sma {
+         sma = i
+      } else if i > lar {
+         lar = i
+      }
+   }
+   return (lar, sma)
+}
+
+let num = ls(array: [40,12,-5,78,98])
+print("Largest number is: \(num.large) and smallest number is: \(num.small)")
+```
+
+* Functions with Optional Return Types
+```
+func funcNam(var1:Type) -> (var:Type)?{
+
+     if(condition){
+     	return (var:Type)
+     }else{
+     	return nil
+     }
+
+}
+```
+
+## Type of Param to Function 
+
+* Local Parameter Names
+	* * parameter names allow us to name a function parameters to make their purpose more clear inside of the function 
+```
+func sample(number: Int) {
+   print(number)
+}
+```
+* External Parameter Names
+	* parameter names allow us to name a function parameters to make their purpose more clear out side of the function 
+```
+func functionName(extParam1 var1:Type, extParam2 var2:Type) -> ReturnType{
+	let res = var1 + var2;
+    return res
+}
+print(functionName(extParam1:5,extParm2:10))
+```
+
+* Variadic Parameters
+	* define function with multiple number of arguments,
+```
+func functName<N>(varInput:N...){
+	for i in varInput{
+		print(i)
+	}
+}
+```
+* I/O Parameters
+	* keyword 'inout' since its values are passed 'in' to the function and its values are accessed and modified by its function body and it is returned back 'out' of the function
+```
+func functionSwap(a1: inout Int, b1: inout Int) {
+   let t = a1
+   a1 = b1
+   b1 = t
+}
+
+var no = 2
+var co = 10
+functionSwap(a1: &no, b1: &co)
+print("Swapped values are \(no), \(co)")
+//Swapped values are 10, 2
+```
+* Function Types / Function reference 
+```
+	func originFunctionName(InputDataType1, InputDataType2...InputDataTypeN) -> ReturnType {
+
+	}
+	var aliasFunctionName: (InputDataType1, InputDataType2...InputDataTypeN) -> ReturnType =  originFunctionName
+
+```	
+
+```
+func sum(a: Int, b: Int) -> Int {
+   return a + b
+}
+var addition: (Int, Int) -> Int = sum
+print("Result: \(addition(40, 89))")
+```
+
+* Function Types as Parameter Types & Return Types
+```
+	func originFunction(InputDataType1, InputDataType2...InputDataTypeN) -> ReturnType {
+
+	}
+	
+	var aliasFunctionName: (InputDataType1, InputDataType2...InputDataTypeN) -> ReturnType =  originFunction
+
+	aliasFunctionName(val1,val2..valN)    
+
+	func newAliasFunction(aliasFunctionName:(InputDataType1, InputDataType2...InputDataTypeN) -> ReturnType, var1:DataType1 ,var2:DataType2){
+
+	}
+
+	newAliasFunction(originFunction, InputValue1, InputValue2)
+```	
+	* Example 
+```
+func sumFunction(a: Int, b: Int) -> Int {
+   return a + b
+}
+var additionFunction: (Int, Int) -> Int = sumFunction
+print("Result: \(additionFunction(40, 89))")
+
+func newAdditionFunction(additionFunction: (Int, Int) -> Int, a: Int, b: Int) {
+   print("Result: \(additionFunction(a, b))")
+}
+newAdditionFunction(sumFunction, 10, 20)
+```
+
+* Nested Functions
+```
+func topLevelFunction(externalVar localVarable:DataType) -> () -> InternalFunctionReturnType{
+
+	 func internalFunction() -> InternalFunctionReturnType{
+
+	 	return returnTypeVaoue
+	 }
+
+	 return internalFunction
+}
+```
+	* Example 
+```
+func calcDecrement(forDecrement total: Int) -> () -> Int {
+   var overallDecrement = 0
+   func decrementer() -> Int {
+      overallDecrement -= total
+      return overallDecrement
+   }
+   return decrementer
+}
+
+let decrem = calcDecrement(forDecrement: 30)
+print(decrem())
+```	
