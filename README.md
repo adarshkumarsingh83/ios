@@ -742,4 +742,25 @@ func calcDecrement(forDecrement total: Int) -> () -> Int {
 
 let decrem = calcDecrement(forDecrement: 30)
 print(decrem())
-```	
+```
+
+---
+
+## Closures 
+* closure with parameters and returns a data type 
+```
+{
+   (paranName:DataType) −> ReturnDataType in
+   statements
+   return ReturnValue 
+}
+
+
+let closureName = {
+   (paranName:DataType) −> ReturnDataType in
+   statements
+   return ReturnValue 
+}
+
+let result = closureName(InputValues)
+```
